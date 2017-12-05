@@ -1,0 +1,31 @@
+<content-header name="Dashboard" small="Versão {{ consts.version }}"></content-header>
+<section class="content" ng-controller="DashboardCtrl as dashboard">
+
+      <div class="row">
+        <value-box grid="4" color-class="bg-green" icon-class="fa fa-bank"
+          value="R$ {{ dashboard.credit | number: 2  }}" text="Total de Créditos"></value-box>
+        <value-box grid="4" color-class="bg-red" icon-class="fa fa-credit-card"
+          value="R$ {{ dashboard.debt | number: 2  }}" text="Total de Débitos"></value-box>
+        <value-box grid="4" color-class="bg-blue" icon-class="fa fa-money"
+          value="R$ {{ dashboard.total | number: 2  }}" text="Valor Consolidado"></value-box>
+      </div>
+      <div class="box box-success">
+        <div class="box-header">
+          <h3 class="box-title">Sumario Mensal</h3>
+          <div class="box-tools pull-right">
+              <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="col-lg-12">
+            <div class="box-body">
+                <div class="chart">
+                  <canvas id="barChart" style="height: 211px; width: 537px;" width="483" height="189"></canvas>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>

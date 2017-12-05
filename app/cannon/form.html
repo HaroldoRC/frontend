@@ -1,0 +1,27 @@
+<div role="form">
+  <div class="box-body">
+    <field id="cannonName" label="Nome" model="cannon.nome"
+         placeholder="Informe o Nome" grid="12 6 4" readonly="tabDelete"></field>
+    <field id="cannonDesc" label="Descrição" model="cannon.desc" type="number"
+         placeholder="Informe a descrição" grid="12 6 4" readonly="tabDelete"></field>
+    <hr>
+
+    <div class="col-xs-12 col-lg-12">
+      <fieldset>
+        <legend>Parâmetros</legend>
+        <div ng-include="'cannons/paramsList.html'"></div>
+      </fieldset>
+    </div>
+
+  </div>
+
+  <div class="box-footer">
+    <button class="btn btn-primary" ng-click="createCannon()"
+         ng-if="tabCreate">Incluir</button>
+    <button class="btn btn-info" ng-click="updateCannon()"
+         ng-if="tabUpdate">Alterar</button>
+    <button class="btn btn-danger" ng-click="deleteCannon()"
+         ng-if="tabDelete">Excluir</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancelar</button>
+  </div>
+</div>

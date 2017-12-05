@@ -1,0 +1,21 @@
+<div class="box-body">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="cannon in Cannons">
+        <td>{{:: cannon.nome }}</td>
+        <td>{{:: cannon.desc }}</td>
+        <td style="width:100px;">
+          <button class="btn btn-warning" ng-click="showTabUpdate(cannon)"><i class="fa fa-pencil"></i></button>
+          <button class="btn btn-danger" ng-click="showTabDelete(cannon)"><i class="fa fa-trash-o"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
